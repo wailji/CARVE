@@ -1,0 +1,25 @@
+# CARVE — evaluation requirements (AMD / ROCm).
+#
+# Install PyTorch FIRST, then this file:
+#
+#   pip install torch==2.9.1 --index-url https://download.pytorch.org/whl/rocm6.3
+#   pip install -r requirements.txt
+#
+# Python 3.12 on 8x AMD MI210.
+
+# ── HuggingFace stack ──
+transformers==4.46.2
+tokenizers==0.20.3
+accelerate==1.13.0
+datasets==4.8.5
+safetensors==0.7.0
+huggingface_hub==0.36.2
+sentencepiece==0.2.1
+
+# ── scoring ──
+human-eval==1.0.3        # HumanEval / MBPP Pass@1 (executes generated code)
+
+math-verify==0.9.0       # symbolic answer equality for MATH-500 / GSM8K
+
+# ── utilities ──
+numpy==2.4.3

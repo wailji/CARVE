@@ -1,0 +1,50 @@
+# Project artifacts
+docs/
+outputs/
+prompts/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local environment files
+.env
+.env.*
+
+# Editor/OS clutter
+.DS_Store
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# SLURM job scripts and their logs
+jobs/
+
+# Claude Code harness state (scheduled tasks, worktrees, local skills cache)
+.claude/
+
+# per-run configs and run outputs land under outputs/benchmarks/ and are
+# already covered by the outputs/ rule above. The driver code under
+# benchmark/ IS tracked.
+eval/
+external/
+
+# Vendored third-party reference repos — cloned locally for inspection but
+# NOT part of this codebase. ~120 MB combined.
+DAEDAL/
+Dream/
+LLaDA/
